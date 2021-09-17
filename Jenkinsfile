@@ -8,8 +8,7 @@ pipeline {
             }            
             steps {
 
-                sh 'Deployed to Dev'
-                sh 'ls'
+                sh 'echo Deployed to Dev'                
                 sh 'cat abc.txt'
             }
        }
@@ -19,8 +18,7 @@ pipeline {
                 branch 'test'  
             }            
             steps {
-                sh 'Deployed to QA'
-                sh 'ls'
+                sh 'echo Deployed to QA'                
                 sh 'cat abc.txt'
             }
        }  
@@ -31,8 +29,7 @@ pipeline {
                 branch 'main'  
             }            
             steps {
-                sh 'Deployed to Prod'
-                sh 'ls'
+                sh 'echo Deployed to Prod'               
                 sh 'cat abc.txt'
             }
        }
