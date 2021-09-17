@@ -7,6 +7,7 @@ pipeline {
                 branch 'dev'  
             }            
             steps {
+
                 sh 'Deployed to Dev'
                 sh 'ls'
                 sh 'cat abc.txt'
@@ -35,6 +36,8 @@ pipeline {
                 sh 'cat abc.txt'
             }
        }
+
+               
          
      }
 }  
