@@ -7,7 +7,8 @@ pipeline {
                 branch 'dev'  
             }            
             steps {
-                sh 'ls'
+
+                sh 'echo Deployed to Dev'                
                 sh 'cat abc.txt'
             }
        }
@@ -17,10 +18,23 @@ pipeline {
                 branch 'test'  
             }            
             steps {
-                sh 'ls'
+                sh 'echo Deployed to QA'                
                 sh 'cat abc.txt'
             }
-       }     
+       }  
+        
+         
+        stage('prod-deploy') {            
+            when {
+                branch 'main'  
+            }            
+            steps {
+                sh 'echo Deployed to Prod'               
+                sh 'cat abc.txt'
+            }
+       }
+
+               
          
      }
 }  
