@@ -8,7 +8,7 @@ pipeline {
             }            
             steps {
 
-                sh 'echo Deployed to Dev new'                
+                sh 'echo Deployed to Dev'                
                 sh 'cat abc.txt'
             }
        }
